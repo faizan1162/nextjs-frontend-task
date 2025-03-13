@@ -1,6 +1,6 @@
 import { Task } from "../types/task";
 import { TrashIcon } from "@heroicons/react/24/solid";
-import { formatDate } from '../utils/helper';
+import { formatDate } from 'utils/helper';
 interface TaskListProps {
     tasks: Task[];
     onDelete: (id: number) => void;

@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { fetchTasks, createTask, deleteTask } from '../services/taskService';  // Correct import
-import { Task } from '../types/task';
-import { showSuccess, showError } from "../utils/helper";
+import { fetchTasks, createTask, deleteTask } from 'services/taskService';
+import { Task } from 'types/task';
+import { showSuccess, showError } from "utils/helper";
 
 const useTasks = () => {
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -38,7 +38,7 @@ const useTasks = () => {
 
     const removeTask = async (id: number) => {
         try {
-            await deleteTask(id);  // Correct usage
+            await deleteTask(id);
             setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
             showSuccess(`Task deleted successfully!`);
         } catch (error) {
