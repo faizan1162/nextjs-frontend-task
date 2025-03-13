@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     return (
         <html lang="en">
         <head />
-        <body className={`${inter.className} bg-gray-100`}>
+        <body className={`${inter.className} bg-gray-100 flex flex-col min-h-screen`}>
         <header className="bg-blue-600 text-white shadow-md">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <h1 className="text-2xl font-bold">
@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                <Nav />
             </div>
         </header>
-        <main className="container mx-auto px-4 py-6">
+        <main className="container mx-auto px-4 py-6  flex-grow">
             {children}
         </main>
         <ToastContainer />
