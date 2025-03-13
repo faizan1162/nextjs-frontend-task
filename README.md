@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Management Frontend
 
-## Getting Started
+A scalable and efficient task management frontend built using NextJS, TypeScript and Tailwind Css.
 
-First, run the development server:
+## Prerequisites
+
+Before running the application, ensure that you have the following installed:
+
+- **Node.js** (v20 or later)  
+  Download and install from [Node.js official website](https://nodejs.org/)
+- **npm** (comes with Node.js)  
+  Check your npm version by running `npm -v` in the terminal.
+
+## Features
+
+- **Task Management**: Create, delete, and list tasks.
+
+## Installation
+
+Follow these steps to install and configure the project.
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/faizan1162/nextjs-frontend-task.git
+```
+### 2. Install Project Dependencies
+To install the necessary dependencies, run:
+
+```bash
+$ npm install
+```
+### 3. Configure Environment Variables
+configure .env file. You can copy the example .env.example file and rename it to .env
+Then, edit the .env file and update the backend url if needed.
+- By default backend url is given http://localhost:3000/
+- frontend url is set on http://localhost:3001/
+
+### 4. Running the Application
+After configuring the environment variables, you can run the application in different modes:
+- **Development Mode:**
+  To start the app in development mode, use:
+```bash
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This project is licensed under the MIT License.
