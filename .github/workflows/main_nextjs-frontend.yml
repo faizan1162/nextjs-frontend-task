@@ -32,7 +32,7 @@ jobs:
       - name: Zip artifact for deployment
         run: |
           # Zip only necessary files for deployment
-          zip -r release.zip .next package.json node_modules public next.config.js tailwind.config.js .env.example
+          zip -r release.zip .next package.json public next.config.js tailwind.config.js .env.example
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -61,9 +61,6 @@ jobs:
           ls -alh  # Check if correct files are unzipped
           ls -alh .next  # Ensure .next folder exists after extraction
 
-      - name: Install dependencies on Azure
-        run: npm install
-
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
@@ -72,10 +69,3 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4AB2C27FF1B44B6F9CFBBA2369B30AD1 }}
-
-      - name: Start Next.js app on Azure
-        run: |
-          # Ensure next is installed
-          npm install --production
-          # Start the Next.js application
-          npm run start
